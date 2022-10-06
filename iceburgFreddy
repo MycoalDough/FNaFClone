@@ -30,6 +30,15 @@ public void Update()
       time = time + Time.deltaTime;
 }
 
+public void Jumpscare()
+{
+      jumpscare.SetActive(true);
+      if(tablet.gameObject)
+      {
+            Destroy(tablet.gameObject);
+      }
+}
+
 public void jumpscareTimer()
 {
   timeTilJumpscare = 300 - AILevel;
