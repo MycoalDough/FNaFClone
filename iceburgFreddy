@@ -6,7 +6,8 @@
 public TemperatureManager temp;
 public double maxTime;
 public float time;
-public 
+public double timeTilJumpscare;
+public float timeJumpscare;
 public bool isRushing;
 
 public bool phase1 = true;
@@ -16,6 +17,14 @@ public int AILevel;
 public GameObject effect;
 public TabletManager tablet;
 
+public DoorManager leftDoor;
+
+public int leftOpen;
+public int rightOpen;
+public int ventOpen;
+public DoorManager rightDoor;
+public DoorManger vent;
+
 public void Update()
 {
       time = time + Time.deltaTime;
@@ -23,7 +32,40 @@ public void Update()
 
 public void jumpscareTimer()
 {
-  public 
+  timeTilJumpscare = 300 - AILevel;
+  
+  
+  timeJumpscare = timeJumpscare + Time.DeltaTime * (leftOpen + rightOpen + ventOpen);
+  
+  if(timeJumpscare > timeTilJumpscare)
+  {
+      //jumpscare!!!
+  }
+  
+  if(leftDoor.isOpen == true)
+  {
+      leftOpen = 1;
+  }
+  else
+  {
+      leftOpen = 0;
+  }
+    if(rightDoor.isOpen == true)
+  {
+      rightOpen = 1;
+  }
+  else
+  {
+      rightOpen = 0;
+  }
+    if(vent.isOpen == true)
+  {
+      ventOpen = 1;
+  }
+  else
+  {
+      ventOpen = 0;
+  }
 }
 
 
