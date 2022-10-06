@@ -6,6 +6,74 @@
 public TemperatureManager temp;
 public double maxTime;
 public float time;
+public 
 public bool isRushing;
 
-public 
+public bool phase1 = true;
+
+public int AILevel;
+
+public GameObject effect;
+public TabletManager tablet;
+
+public void Update()
+{
+      time = time + Time.deltaTime;
+}
+
+public void jumpscareTimer()
+{
+  public 
+}
+
+
+public void phase1()
+{
+if(phase1)
+{
+        maxTime = 20;
+
+}
+    if(temp.temp > (90 - AILevel) && phase1)
+    {
+
+      if(time > maxTime)
+      {
+        phase1 = false;
+              generateRandomMax();
+        time = 0;
+      }
+    }
+}
+
+public void phase2
+{
+  if(!phase1)
+  {
+      if(time > maxTime)
+    {
+      generateRandomMax();
+      time = 0;
+      StartCourintine(stunPlayer());
+    }
+  }
+
+}
+
+public void generateRandomMax()
+{
+  maxTime = Random.Range(30 - AILevel, 41);
+}
+
+IEnumberator stunPlayer()
+{
+  effect.SetActive(true);
+  tablet.isUsing = false;
+  tablet.SetActive(false);
+  tablet.PlayerCam(); //use to return the player to their original view
+  yield return new WaitForSeconds(5);
+  tablet.SetActive(true);
+  effect.SetActive(false);
+}
+
+
