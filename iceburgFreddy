@@ -1,0 +1,11 @@
+//if you have the temp to be 90-AILevel for 20 seconds, he'll jumpscare (the timer of 20 seconds is shown by an icecube melting [square changing scale?])
+//once it does melt, then you have to close all doors to prevent him from seeping in, will occasionally mess up your tablet by malfunctioning it with water 
+//(makes you get kicked out of tablet for random seconds and electricity effect plays to show that)
+
+//PHASE 1
+public TemperatureManager temp;
+public double maxTime;
+public float time;
+public bool isRushing;
+
+public 
