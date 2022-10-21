@@ -1,0 +1,12 @@
+public GameObject[] positions;
+
+
+//
+public Hallucionations h;
+
+public static int AILevel;
+
+public void Start()
+{
+  
+}
