@@ -1,0 +1,42 @@
+public GameObject[] positions;
+
+
+//
+public Hallucionations h;
+
+public float maxTime;
+public float time;
+
+public static int AILevel;
+public CameraManager c;
+
+public bool active;
+
+public void Start()
+{
+  maxTime = 1;
+  time = 0;
+}
+
+public void Update()
+{
+  if(h.value > __)
+  {
+    active = true;
+  }
+  else
+  {
+    active = false;
+  }
+}
+
+public void changeCamera()
+{
+  int rng = Random.Range(0, positions.Length)
+  for(int i = 0; i < positions.Length; i++)
+  {
+    positions[i].SetActive(false);
+  }
+    positions[rng].SetActive(true);
+
+}
