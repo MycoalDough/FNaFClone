@@ -1,0 +1,20 @@
+public Animator anim;
+
+
+public void Start()
+{
+    anim.Play();
+    anim.speed = 0f;
+}
+
+public void hearMusic(float newMusic)
+{
+  StartCourintine(move(newMusic));
+}
+
+IENumerator move(float newMusic)
+{
+  anim.speed = 1f;
+  yeild return new WaitForSeconds(newMusic);
+  anim.speed = 0f;
+}
