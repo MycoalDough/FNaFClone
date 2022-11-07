@@ -1,8 +1,53 @@
 public Hallucionatins h;
-
 public Temperature t;
+
+public bool active = false;
+public float timeToSpawnIn;
+public float timeTilSpawnin;
+
+
+public float timeTilJS; timer;
+
+public static int AILevel;
 
 public void Update()
 {
   //if your hall level is too high, then he will start to appear in the office, hover mouse over him to remove, faster fade in with higher temp.
+ timeToSpawnIn = 100 - AILevel - t.temp;
+ timeTilJS = (30 - AILevel) / 5;
+}
+
+public void checkIfCanJS()
+{
+  if(h.level <= 3)
+  {
+    timeTilSpawnin = timeTilSpawnin + Time.deltaTime;
+    
+    if(timeTilSpawnin > timeToSpawnIn)
+    {
+        active = true;
+    }
+  }
+  else
+  {
+    active = false;
+    timeTilSpawnin = 0;
+  }
+}
+
+public void JS()
+{
+  if(active)
+  {
+    timer = timer + Time.deltaTime;
+    
+    if(timer > timeTilJS}
+    {
+      //jumpscare();
+    }
+  }
+  else
+  {
+    timer = 0;
+  }
 }
